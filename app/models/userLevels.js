@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class UsersLevelModels {
     listall(knex) {
-        return knex('user_level')
+        return knex('pt')
             .limit(10);
     }
     listraw(knex) {

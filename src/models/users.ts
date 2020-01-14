@@ -4,12 +4,12 @@ import  Knex = require('knex');
 export class UsersModels {
     //select * from user
     listall(knex: Knex) {
-        return knex('user')
+        return knex('pt')
         .limit(10);
     }
 
     listraw(knex: Knex) {
-        let sql = 'select * from user limit 10';
+        let sql = 'select * from pt limit 10';
         return knex.raw(sql);
     }
 

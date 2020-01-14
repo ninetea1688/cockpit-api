@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class UsersModels {
     listall(knex) {
-        return knex('user')
+        return knex('pt')
             .limit(10);
     }
     listraw(knex) {
-        let sql = 'select * from user limit 10';
+        let sql = 'select * from pt limit 10';
         return knex.raw(sql);
     }
     wherecondition(knex, CLevel) {

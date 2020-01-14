@@ -4,7 +4,7 @@ import  Knex = require('knex');
 export class UsersLevelModels {
     //select * from user
     listall(knex: Knex) {
-        return knex('user_level')
+        return knex('pt')
         .limit(10);
     }
 
