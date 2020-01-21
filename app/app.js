@@ -12,6 +12,7 @@ const index_1 = require("./routes/index");
 const people_1 = require("./routes/people");
 const users_1 = require("./routes/users");
 const userlevel_1 = require("./routes/userlevel");
+const members_1 = require("./routes/members");
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -51,6 +52,7 @@ app.use('/', index_1.default);
 app.use('/people', people_1.default);
 app.use('/users', users_1.default);
 app.use('/userlevel', userlevel_1.default);
+app.use('/members', members_1.default);
 app.use((req, res, next) => {
     var err = new Error('Not Found');
     err['status'] = 404;

@@ -18,6 +18,7 @@ import index from './routes/index';
 import people from './routes/people';
 import users from './routes/users';
 import userlevel from './routes/userlevel';
+import members from './routes/members';
 
 import { userInfo } from 'os';
 
@@ -60,7 +61,7 @@ app.use((req, res, next) => {
         conn.query('SET NAMES utf8', (err) => {
           done(err,conn);
         });
-      }
+      } 
     },
     debug: true,
     acquireConnectionTimeout: 5000
@@ -77,7 +78,7 @@ app.use('/',index);
 app.use('/people',people);
 app.use('/users', users);
 app.use('/userlevel',userlevel);
-
+app.use('/members', members);
 
 //catch 404 and forward to error handler
 app.use((req,res,next) => {
